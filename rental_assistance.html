@@ -1,0 +1,227 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rental Assitance Mutal Aid Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <nav class="menu-bar">
+      <a class="menu-item" href="index.html">Home</a>
+      <a class="menu-item" href="rental_assistance.html"
+        >Mutal Aid Calculator</a
+      >
+    </nav>
+    <div class="container">
+      <div class="form-container">
+        <form>
+          <h1 id="header">Rental Assitance Mutal Aid Calculator</h1>
+
+          <div class="form-control">
+            <p>How old are you?</p>
+            <input type="radio" value="Under 18" id="under-18" name="age" />
+            <label for="under-18"> Under 18 </label><br />
+            <input type="radio" value="18-26" id="18-26" name="age" />
+            <label for="18-26"> 18-26 </label><br />
+            <input type="radio" value="27-40" id="27-40" name="age" />
+            <label for="27-40"> 27-40 </label><br />
+            <input type="radio" value="40+" id="above-40" name="age" />
+            <label for="above-40"> 40+ </label><br />
+          </div>
+
+          <div class="form-control">
+            <p>What is your race?</p>
+            <input type="radio" value="White" id="white" name="race" />
+            <label for="white"> White </label><br />
+            <input
+              type="radio"
+              value="Non-white, non-native"
+              id="non-white"
+              name="race"
+            />
+            <label for="non-white"> Non-white, non-native </label><br />
+            <input
+              type="radio"
+              value="Native or Indigenous"
+              id="native"
+              name="race"
+            />
+            <label for="native"> Native or Indigenous </label><br />
+          </div>
+
+          <div class="form-control">
+            <p>How many dependents do you have?</p>
+            <input type="radio" value="0" id="dependents-0" name="dependents" />
+            <label for="dependents-0"> 0 </label><br />
+            <input type="radio" value="1" id="dependents-1" name="dependents" />
+            <label for="dependents-1"> 1 </label><br />
+            <input type="radio" value="2" id="dependents-2" name="dependents" />
+            <label for="dependents-2"> 2 </label><br />
+            <input type="radio" value="3" id="dependents-3" name="dependents" />
+            <label for="dependents-3"> 3 </label><br />
+            <input
+              type="radio"
+              value="4+"
+              id="dependents-above-4"
+              name="dependents"
+            />
+            <label for="dependents-above-4"> 4+ </label><br />
+          </div>
+
+          <div class="form-control">
+            <p>Do you own property?</p>
+            <input type="radio" value="Yes" id="property-yes" name="property" />
+            <label for="property-yes"> Yes </label><br />
+            <input type="radio" value="No" id="property-no" name="property" />
+            <label for="property-no"> No </label><br />
+            <input type="radio" value="No" id="property-more" name="property" />
+            <label for="property-more">
+              Yes, I own more than one property </label
+            ><br />
+          </div>
+
+          <div class="form-control">
+            <p>What is your yearly income?</p>
+            <input
+              type="radio"
+              value="<$50,000"
+              id="income-50k"
+              name="income"
+            />
+            <label for="income-50k"> <$50,000 </label><br />
+            <input
+              type="radio"
+              value="$50,000 - $100,000"
+              id="income-100k"
+              name="income"
+            />
+            <label for="income-100k"> $50,000 - $100,000 </label><br />
+            <input
+              type="radio"
+              value="$100,000 - $150,000"
+              id="income-150k"
+              name="income"
+            />
+            <label for="income-150k"> $100,000 - $150,000 </label><br />
+            <input
+              type="radio"
+              value="$150,000+"
+              id="income-above-150k"
+              name="income"
+            />
+            <label for="income-above-150k"> $150,000+ </label><br />
+          </div>
+
+          <div class="form-control">
+            <p>What is your education level?</p>
+            <input
+              type="radio"
+              value="Less than high school diploma"
+              id="education-below-high-school"
+              name="education"
+            />
+            <label for="under-18">Less than high school diploma</label><br />
+            <input
+              type="radio"
+              value="High school diploma or equivalent"
+              id="education-high-school"
+              name="education"
+            />
+            <label for="18-26"> High school diploma or equivalent </label><br />
+            <input
+              type="radio"
+              value="Bachelors degree"
+              id="education-bachelors"
+              name="education"
+            />
+            <label for="27-40"> Bachelors degree </label><br />
+            <input
+              type="radio"
+              value="Higher degree"
+              id="education-higher"
+              name="education"
+            />
+            <label for="above-40"> Higher degree </label><br />
+          </div>
+
+          <div class="form-control">
+            <p>
+              Did you / will you inherit money, property, or other assets from
+              family?
+            </p>
+            <input
+              type="radio"
+              value="No, I (will) have to support my family or inherit their debt"
+              id="inheritance-support"
+              name="inheritance"
+            />
+            <label for="inheritance-support">
+              No, I (will) have to support my family or inherit their debt </label
+            ><br />
+            <input
+              type="radio"
+              value="No, I will neither inherit assets nor debt"
+              id="inheritance-neither"
+              name="inheritance"
+            />
+            <label for="inheritance-neither">
+              No, I will neither inherit assets nor debt</label
+            ><br />
+            <input
+              type="radio"
+              value="Yes, under $100,000"
+              id="inheritance-100k"
+              name="inheritance"
+            />
+            <label for="inheritance-100k">Yes, under $100,000 </label><br />
+            <input
+              type="radio"
+              value="Yes, between $100,000 and  $500,000"
+              id="inheritance-500k"
+              name="inheritance"
+            />
+            <label for="inheritance-500k">
+              Yes, between $100,000 and $500,000</label
+            ><br />
+            <input
+              type="radio"
+              value="Yes, between $500,000 and 1 million"
+              id="inheritance-1m"
+              name="inheritance"
+            />
+            <label for="inheritance-1m">
+              Yes, between $500,000 and $1 million</label
+            ><br />
+            <input
+              type="radio"
+              value="Yes, more than 1 million"
+              id="inheritance-above-1m"
+              name="inheritance"
+            />
+            <label for="inheritance-above-1m"> Yes, more than 1 million</label
+            ><br />
+          </div>
+
+          <!-- <div class="form-control">
+        <label for="income"> Do you rent or own your home?</label>
+        <input
+          type="number"
+          placeholder="Enter your income"
+          id="income"
+          name="income"
+        /><br /><br />
+      </div> -->
+
+          <input type="button" value="Submit" id="submit" />
+
+          <div class="form-control">
+            <p class="bold" id="annual-donation"></p>
+            <p class="bold" id="monthly-donation"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
