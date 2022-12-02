@@ -4,10 +4,16 @@ document.addEventListener(
     document.getElementById("toggle-menu").onclick = function () {
       toggle_menu();
     };
+
+    document.querySelectorAll(".nav-button").forEach(function (el) {
+      el.onclick = function () {
+        this.parentNode.parentNode.classList.toggle("closed");
+      };
+    });
   },
   false
 );
 
 function toggle_menu() {
-  document.getElementById("mobile-menu").classList.toggle("hidden");
+  document.getElementById("desktop-menu").classList.toggle("menu-hidden");
 }

@@ -1,6 +1,8 @@
 body {
   background-color: #aeecef;
   font-family: Verdana;
+}
+.center {
   text-align: center;
 }
 /* form {
@@ -12,6 +14,10 @@ body {
 } */
 .form-control {
   text-align: left;
+  margin-bottom: 25px;
+}
+.form-control-center {
+  text-align: center;
   margin-bottom: 25px;
 }
 .form-control p {
@@ -64,7 +70,7 @@ a {
 
 .container {
   background-color: #fff;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 30px 20px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
@@ -74,7 +80,7 @@ a {
 }
 
 .menu-bar {
-  max-width: 840px;
+  max-width: 1040px;
   margin: 0 auto;
   background-color: #777;
   padding: 5px 20px;
@@ -84,9 +90,11 @@ a {
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.menu-item {
+/* .menu-item {
   padding: 5px 20px;
-}
+} */
+
+
 
 .menu-item > a {
   color: white;
@@ -95,10 +103,6 @@ a {
 
 #mobile-menu {
   width: 100%;
-}
-
-#desktop-menu {
-  display: flex;
 }
 
 #mobile-menu > .menu-item {
@@ -113,14 +117,98 @@ a {
   display: none;
 }
 
-@media screen and (min-width: 426px) {
+
+@media screen and (min-width: 1000px) {
   #toggle-menu {
     display: none;
   }
+  #desktop-menu {
+    display: flex;
+  }
+  .menu-hidden {
+    display: block;
+  }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1001px) {
   #desktop-menu {
-    display: none;
+    display: block;
   }
+  .menu-hidden {
+    display: none !important;
+  }
+}
+
+
+.icon-menu-item {
+  padding: 0 10px 0 20px;
+}
+
+.icon-menu-item img {
+  height: 30px;
+}
+
+#home-logo {
+  max-width: 300px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+/* Drop Down Styles
+================================ */
+nav .drop-down {
+  list-style: none; 
+  overflow: hidden; /* When ul height is reduced, ensure overflowing li are not shown */
+  height: 152px; /* 152px = 38 (li) * 4 (number of li) */
+  background-color: #777;
+  font-family: Arial;
+  width: 210px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  -webkit-transition: height 0.3s ease;
+          transition: height 0.3s ease;
+}
+
+nav .drop-down.home {
+  width: 80px !important;
+}
+
+nav .drop-down.height-3 {
+  height: 114; /* 152px = 38 (li) * 3 (number of li) */
+}
+
+nav .drop-down.height-4 {
+  height: 152px; /* 152px = 38 (li) * 4 (number of li) */
+}
+
+nav .drop-down.height-5 {
+  height: 190; /* 152px = 38 (li) * 5 (number of li) */
+}
+
+nav .drop-down.closed {
+  /*  When toggled via jQuery this class will reduce the height of the ul which inconjuction
+      with overflow: hidden set on the ul will hide all list items apart from the first */
+  /* current li height 38px + 5px border */
+  height: 30px;
+}
+
+nav .drop-down li a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px 0; /* Larger touch target area */
+}
+
+nav .drop-down:not(.single-item) li:first-child a:after{
+  content: "\25BC";
+  float: right;
+  margin-left: -30px; /* Excessive -margin to bring link text back to center */
+  margin-right: 5px;
 }
