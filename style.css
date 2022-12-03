@@ -101,14 +101,6 @@ a {
   text-decoration: none;
 }
 
-#mobile-menu {
-  width: 100%;
-}
-
-#mobile-menu > .menu-item {
-  width: 100%;
-}
-
 #toggle-menu {
   color: black;
 }
@@ -118,7 +110,7 @@ a {
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 767px) {
   #toggle-menu {
     display: none;
   }
@@ -130,11 +122,17 @@ a {
   }
 }
 
-@media screen and (max-width: 1001px) {
+@media screen and (max-width: 768px) {
   #desktop-menu {
     display: block;
   }
   .menu-hidden {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .menu-socials {
     display: none !important;
   }
 }
