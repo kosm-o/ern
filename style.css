@@ -135,6 +135,9 @@ a {
   .menu-socials {
     display: none !important;
   }
+  nav .drop-down li:not(:first-child) {
+    background-color: #888;
+  }
 }
 
 
